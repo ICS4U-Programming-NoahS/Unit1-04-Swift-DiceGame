@@ -51,7 +51,7 @@ func diceGame() {
         do {
             // Get the user's guess from the user as an int, if possible
             if let userGuessString = readLine(), let userGuess = Int(userGuessString) {
-                
+
                 // Check if user guess is between 1 and 6 inclusive
                 if userGuess <= maxValue && userGuess >= minValue {
                     // Check if user guess is equal to random number
