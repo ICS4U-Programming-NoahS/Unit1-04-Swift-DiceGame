@@ -8,7 +8,7 @@
 //
 // The DiceGame program generates a random number between 1 and 6.
 // It will then ask the user to guess the number.
-// It will keep track of the number of guesses, until the user gets the right answer. 
+// It will keep track of the number of guesses, until the user gets the right answer.
 // If the guess is wrong, the program will tell the user if the guess was too high or too low.
 // It will then tell the user how many guesses it took to get the right answer.
 
@@ -40,13 +40,13 @@ func diceGame() {
 
     // Generate random number between 1 and 6 inclusive
     // Source: stackoverflow.com/questions/24007129/how-to-generate-a-random-number-in-swift
-    let randomInt = Int.random(in:minValue...maxValue)
+    let randomInt = Int.random(in: minValue...maxValue)
 
     // Loop until user input is valid
     repeat {
 
         // Ask the user to guess a number between 1 and 6 inclusive
-        print("Guess an integer between 1 and 6 inclusive: ")
+        print("Guess an integer between 1 and 6 inclusive:")
 
         do {
             // Get the user's guess from the user as an int, if possible
@@ -96,4 +96,4 @@ func diceGame() {
 }
 
 // Call function
-diceGame ()
+diceGame()
