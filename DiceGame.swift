@@ -22,7 +22,7 @@ let maxValue = 6
 // Maximum value of random number
 let minValue = 1
 
-func DiceGame() {
+func diceGame() {
 
     // Initialize guesses to 1
     var guesses = 1
@@ -39,8 +39,8 @@ func DiceGame() {
     print("Welcome to the dice game program!")
 
     // Generate random number between 1 and 6 inclusive
-    // Source: https://stackoverflow.com/questions/24007129/how-to-generate-a-random-number-in-swift
-    let randomInt = Int.random(in: minValue...maxValue)
+    // Source: stackoverflow.com/questions/24007129/how-to-generate-a-random-number-in-swift
+    let randomInt = Int.random(in:minValue...maxValue)
 
     // Loop until user input is valid
     repeat {
@@ -53,7 +53,7 @@ func DiceGame() {
             if let userGuessString = readLine(), let userGuess = Int(userGuessString) {
                 
                 // Check if user guess is between 1 and 6 inclusive
-                if (userGuess <= maxValue && userGuess >= minValue) {
+                if userGuess <= maxValue && userGuess >= minValue {
                     // Check if user guess is equal to random number
                     if userGuess == randomInt {
                         // If user guess is correct
@@ -67,8 +67,8 @@ func DiceGame() {
                         // increment guesses by 1
                         guesses+=1
 
-                        //throw InputError.invalidInput
-                        if (userGuess < randomInt) {
+                        // Check if user guess is too high or too low
+                        if userGuess < randomInt {
                             print("Your guess is incorrect.")
                             print("Guess higher next time.")
                         } else {
@@ -88,7 +88,7 @@ func DiceGame() {
             // If user does not enter a number
             print("Please enter a number.")
         } catch {
-            // If user does not enter a number
+            // Catches any other errors
             print("Please enter a number.")
         }
     // Loop until user guess is equal to random number
@@ -96,4 +96,4 @@ func DiceGame() {
 }
 
 // Call function
-DiceGame ()
+diceGame ()
